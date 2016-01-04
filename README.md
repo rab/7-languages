@@ -72,3 +72,48 @@ To test your setup, run the tests for each exercise on the command line once you
 * add `$GOPATH/bin` to your path variable
     * `go get github.com/onsi/ginkgo/ginkgo`
     * `go get github.com/onsi/gomega`
+
+## Prerequisites using `brew`
+
+* First, get ready:
+    brew update
+
+### Ruby
+
+* With `rbenv`
+
+      brew install rbenv ruby-build && rbenv install 2.1.5
+      rbenv local 2.1.5
+      (cd ruby/ ; bundle install)
+
+### Clojure
+
+    brew install clojure leiningen
+
+### Haskell
+
+    brew install ghc cabal-install && cabal update && cabal install hunit
+
+### Rust
+
+    brew install rust
+
+### Scala
+
+    brew install scala sbt
+
+### Elixir
+
+    brew install elixir
+
+### Go
+
+    brew install go
+    export GOPATH=$(pwd)/go     # put this into your startup file, too
+    export PATH=$PATH:$GOPATH/bin
+    go get github.com/onsi/ginkgo/ginkgo
+    go get github.com/onsi/gomega
+
+#### Test it all!
+
+    sh ./test.sh
