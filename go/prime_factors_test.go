@@ -9,6 +9,39 @@ import (
 
 var _ = Describe("Factors", func() {
 	It("has factors of 1 as []", func() {
-    Expect(prime_factors.Factors(1)).To(Equal([]int{}))
-  })
+		Expect(prime_factors.Factors(1)).To(Equal([]int{}))
+	})
+	It("has factors of 2 as [2]", func() {
+		Expect(prime_factors.Factors(2)).To(Equal([]int{2}))
+	})
+	It("has factors of 3 as [3]", func() {
+		Expect(prime_factors.Factors(3)).To(Equal([]int{3}))
+	})
+	It("has factors of 4 as [2,2]", func() {
+		Expect(prime_factors.Factors(4)).To(Equal([]int{2,2}))
+	})
+	It("has factors of 5 as [5]", func() {
+		Expect(prime_factors.Factors(5)).To(Equal([]int{5}))
+	})
+	It("has factors of 6 as [2 3]", func() {
+		Expect(prime_factors.Factors(6)).To(Equal([]int{2,3}))
+	})
+	It("has factors of 7 as [7]", func() {
+		Expect(prime_factors.Factors(7)).To(Equal([]int{7}))
+	})
+	It("has factors of 8 as [2 2 2]", func() {
+		Expect(prime_factors.Factors(8)).To(Equal([]int{2,2,2}))
+	})
+	It("has factors of 9 as [3 3]", func() {
+		Expect(prime_factors.Factors(9)).To(Equal([]int{3,3}))
+	})
+	It("has factors of 10 as [2 5]", func() {
+		Expect(prime_factors.Factors(10)).To(Equal([]int{2,5}))
+	})
+	It("has factors of 1980 as [2 2 3 3 5 11]", func() {
+		Expect(prime_factors.Factors(1980)).To(Equal([]int{2,2,3,3,5,11}))
+	})
+	It("has factors of 1792560 as [2 2 2 2 3 5 7 11 97]", func() {
+		Expect(prime_factors.Factors(1792560)).To(Equal([]int{2,2,2,2,3,5,7,11,97}))
+	})
 })
